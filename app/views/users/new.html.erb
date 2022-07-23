@@ -1,0 +1,22 @@
+<h1>Musik</h1>
+<h2>Create an Account</h2>
+
+<% if @user.errors.any? %>
+<ol>
+    <% @user.errors.full_messages.each do |msg|%>
+        <%= msg %>
+    <% end %>
+</ol>
+<% end %>
+<div class="forms">
+<%= form_for @user do |f| %>
+   
+    <%= f.text_field :name, :placeholder => 'Artist Name' %>
+    <%= f.email_field :email, :placeholder => 'Email' %>
+    <%= f.password_field :password, :placeholder => 'Password'%>
+    <%= f.password_field :password_confirmation, :placeholder => 'Confirm Password' %>
+    <%= f.label 'Profile Picture' %>
+    <%= f.file_field :avatar  %>
+    <%= f.submit "Sign up!", :class => 'submitButton' %>
+<% end%>
+</div>

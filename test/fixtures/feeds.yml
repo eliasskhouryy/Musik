@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genre_id: 1
+  comment: MyText
+  user_id: 1
+  song_id: 1
+
+two:
+  genre_id: 1
+  comment: MyText
+  user_id: 1
+  song_id: 1

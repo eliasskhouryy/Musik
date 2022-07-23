@@ -1,0 +1,12 @@
+<h1><%= @user.name %></h1>
+
+<% if @user.avatar.attached? %>
+    <%= image_tag(@user.avatar, :style => 'max-width: 200px; border-radius: 50%;') %>
+<% else %> 
+    <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :style => 'max-width: 200px; border-radius: 50%;') %>
+<% end%>
+
+<h2>All music</h2>
+<%  @user.songs.each do |u|%>
+    <h3><%= u.title  if u.present?%></h3>
+<% end %>

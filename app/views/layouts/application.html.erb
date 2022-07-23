@@ -10,6 +10,31 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+    <div class="centre">
+    <% if @current_user.present? %>
+      <%= image_tag("/assets/logo.png") %>
+          <% else %>
+      <%= image_tag("/assets/logo.png") %>
+    <% end %>
+    </div>
+    <div class="left">
+    <% if @current_user.present? %>
+      <%# <%= link_to "all users", users_path if @current_user.admin? %>
+      <%= link_to 'Home', feeds_path %>
+      <%= link_to "Logout", login_path, :method => 'delete' %>
+      <%= link_to "Profile", users_path%>
+    <% else %>
+      <%= link_to 'Sign up', new_user_path %>
+      <%= link_to 'Sign in', login_path %>
+    <% end %>
+    </div>
+   
+    
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

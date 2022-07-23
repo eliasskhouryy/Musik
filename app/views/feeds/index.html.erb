@@ -1,0 +1,33 @@
+
+<div class="feed">
+<h1>Home Feed</h1>
+
+<div class="postBox">
+<h2>Create a new post</h2>
+<%= form_for @fuck do |f| %>
+    <%= f.text_field :comment, :placeholder => 'Write your thoughts in here...' %>
+    <%= f.label :song_id %>
+    <%= f.select :songs, @current_user.songs.pluck(:title, :id), :include_blank => true %>
+    <%= f.submit "post", :class => 'submitButton' %>
+    
+<% end %>
+</div>
+
+
+
+<% @feeds.each do |feed|%>
+<div class="post">
+    <% if feed.user.avatar.attached? %>
+    <%= image_tag(feed.user.avatar, :class => 'feedImage') %>
+    <% else %> 
+    <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :class => 'feedImage') %>
+    <% end%>
+    <h2><%= link_to feed.user.name, user_path(feed.user.id) %></h2>
+    <h3><%= feed.songs.first.title  if feed.songs.first.present? %></h3>
+    <p> <span class="inspiration">Inspiration</span> <br><%= feed.comment %></p>
+</div>
+<% end %>
+
+
+
+</div>

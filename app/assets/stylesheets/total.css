@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(231, 230, 230);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 33;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+nav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+nav a:hover {
+    border-bottom: solid rgb(179, 139, 179) 2px;
+
+}
+
+nav  img  {
+    max-width: 100px;
+    vertical-align: middle;
+    
+}
+
+nav img a:hover {
+    border-bottom: 0px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.post, .postBox {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin: auto 20%;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    display: inline-block;
+    font-weight: 100;
+}
+
+.post  {
+    text-align: left;
+}
+
+.post .inspiration {
+    opacity: 50%;
+    font-style: italic;
+}
+
+.postBox input {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    margin: 10px;
+    background-color: rgb(235, 232, 255);
+}
+
+.postBox input::placeholder {
+    color:black;
+    opacity: 0.6;
+}
+
+.postBox .submitButton {
+    background-color: rgb(170, 206, 170);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 20%; 
+    margin: auto;
+    margin-top: 15px;
+    padding: 6px;
+    display: block;
+}
+.postBox .submitButton:hover {
+    cursor: pointer;
+    background-color: rgb(137, 196, 137);
+}
+
+.postBox .submitButton:active {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+
+.feedImage {
+    object-fit: cover;
+    border-radius: 50%;  
+    width: 100px;
+    height: 100px;
+    float: right;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.forms {
+    background-color: white;
+    display: inline-block;
+    padding: 50px;
+    width: 60%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+
+}
+
+.forms input, .forms label {
+    display: block;
+}
+
+.forms input {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    margin: 10px;
+    background-color: rgb(235, 232, 255);
+}
+
+.forms input::placeholder {
+    color:black;
+    opacity: 0.6;
+}
+
+.forms .submitButton {
+    background-color: rgb(170, 206, 170);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 50%; 
+    margin: auto;
+    padding: 10px;
+}
+.forms .submitButton:hover {
+    cursor: pointer;
+    background-color: rgb(137, 196, 137);
+}
+
+.forms .submitButton:active {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
