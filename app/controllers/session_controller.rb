@@ -1,4 +1,6 @@
 class SessionController < ApplicationController
+  before_action :check_for_logout
+
   def new
   end
   def create

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :check_for_logout
+
   def index
     @users = User.all
   end
