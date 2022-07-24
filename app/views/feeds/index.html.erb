@@ -4,10 +4,10 @@
 
 <div class="postBox">
 <h2>Create a new post</h2>
-<%= form_for @fuck do |f| %>
+<%= form_for @feed do |f| %>
     <%= f.text_field :comment, :placeholder => 'Write your thoughts in here...' %>
     <%= f.label :song_id %>
-    <%= f.select :songs, @current_user.songs.pluck(:title, :id), :include_blank => true %>
+    <%= f.select :songs, @current_user.songs.pluck(:title), :include_blank => true %>
     <%= f.submit "post", :class => 'submitButton' %>
     
 <% end %>
@@ -15,7 +15,7 @@
 
 
 
-<% @feeds.each do |feed|%>
+<% @feeds.reverse.each do |feed|%>
 <div class="post">
     <% if feed.user.avatar.attached? %>
     <%= image_tag(feed.user.avatar, :class => 'feedImage') %>
@@ -24,7 +24,11 @@
     <% end%>
     <h2><%= link_to feed.user.name, user_path(feed.user.id) %></h2>
     <h3><%= feed.songs.first.title  if feed.songs.first.present? %></h3>
+    <% if feed.songs.first.present? %>
+    <h3><%= feed.songs.first.bpm %> BPM </h3>
+    <% end%>
     <p> <span class="inspiration">Inspiration</span> <br><%= feed.comment %></p>
+    <%# <%= link_to 'Delete post', @current_user, :method => 'delete', :data => {:confirm => 'Are you sure?'} if @current_user.present? %> 
 </div>
 <% end %>
 

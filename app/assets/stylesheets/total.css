@@ -55,7 +55,7 @@ nav img a:hover {
 
 .post, .postBox {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     padding-top: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -63,9 +63,11 @@ nav img a:hover {
     margin-bottom: 15px;
 }
 
+
 .post h2 {
     display: inline-block;
     font-weight: 100;
+    
 }
 
 .post  {
@@ -80,7 +82,9 @@ nav img a:hover {
 .postBox input {
     padding: 15px;
     width: 100%;
-    border: none;
+    border: 0px solid rgb(110, 203, 203);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-radius: 5px;
     margin: 10px;
     background-color: rgb(235, 232, 255);
 }
@@ -98,6 +102,7 @@ nav img a:hover {
     margin-top: 15px;
     padding: 6px;
     display: block;
+    border: none;
 }
 .postBox .submitButton:hover {
     cursor: pointer;
@@ -121,11 +126,20 @@ nav img a:hover {
 .forms {
     background-color: white;
     display: inline-block;
-    padding: 50px;
+    padding: 0 50px 50px 50px;
     width: 60%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
 
+}
+
+.forms h1 {
+background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
 }
 
 .forms input, .forms label {
@@ -137,7 +151,9 @@ nav img a:hover {
     width: 100%;
     border: none;
     margin: 10px;
-    background-color: rgb(235, 232, 255);
+    background-color: rgb(237, 235, 250);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    
 }
 
 .forms input::placeholder {

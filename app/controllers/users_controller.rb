@@ -1,10 +1,25 @@
 class UsersController < ApplicationController
-  before_action :check_for_logout
+    # before_action :check_for_logout
 
   def index
     @users = User.all
   end
 
+  def show
+    @user = User.find params[:id]
+  end
+
+  def update
+    if @current_user.avatar.attached?
+      @current_user.avatar.purge
+      @current_user.update user_params(:avatar)
+      redirect_to users_path
+    else
+      @current_user.update user_params(:avatar)
+      redirect_to users_path
+    end
+
+  end
 
   def new
     @user = User.new

@@ -1,6 +1,7 @@
 class FeedsController < ApplicationController
   before_action :check_for_login
   def new
+    @feed = Feed.new
   end
 
   def create
@@ -10,12 +11,18 @@ class FeedsController < ApplicationController
   end
 
   def index
-    @fuck = Feed.new
+    @feed = Feed.new
     @feeds = Feed.all
+  end
+
+
+  def destroy
+    feed = Feed.find params[:id]
+    feed.destroy
   end
 
   private
   def feed_params
-    params.required(:feed).permit(:comment, :title)
+    params.required(:feed).permit(:comment)
   end
 end

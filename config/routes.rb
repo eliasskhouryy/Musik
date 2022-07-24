@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  root :to => 'session#new'
+  if @current_user.present?
+    root :to => 'session#new'
+  else
+    root :to => 'feeds#index'
+  end
+
+
   resources :users
   resources :feeds
-  
-  get '/login' => 'session#new'
+
+  get '/login' => 'session#new' 
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
