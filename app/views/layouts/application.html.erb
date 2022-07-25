@@ -11,27 +11,35 @@
 
   <body>
     <nav>
-    <div class="centre">
-    <% if @current_user.present? %>
-      <%= image_tag("/assets/logo.png") %>
-          <% else %>
-      <%= image_tag("/assets/logo.png") %>
-    <% end %>
-    </div>
-    <div class="left">
-    <% if @current_user.present? %>
-      <%# <%= link_to "all users", users_path if @current_user.admin? %>
-      <%= link_to 'home', feeds_path, :class => 'material-icons' %>
-      <%= link_to "person", users_path, :class => 'material-icons'%>
-      <%= link_to "logout", login_path, :method => 'delete', :class => 'material-icons' %>
+
+      <div class="left">
+        <% if @current_user.present? %>
+          <%# <%= link_to "all users", users_path if @current_user.admin? %>
+          <%= link_to "logout", login_path, :method => 'delete', :class => 'material-icons md-48' %>
+          <%= link_to "person", users_path, :class => 'material-icons md-48'%>
+          <%= link_to 'home', feeds_path, :class => 'material-icons md-48' %>
+        <% else %>
+          <%= link_to 'Sign up', new_user_path %>
+          <%= link_to 'Sign in', login_path %>
+        <% end %>
+      </div>
       
-    <% else %>
-      <%= link_to 'Sign up', new_user_path %>
-      <%= link_to 'Sign in', login_path %>
-    <% end %>
-    </div>
-   
-    
+      <% if @current_user.present? %>
+      <div class="searchBar">
+        <form method="GET" action="/search">
+          <input type="search" placeholder="Search users" name="query" method="GET">
+        </form>
+      </div>
+      <% end%>
+
+      <div class="right">
+        <% if @current_user.present? %>
+          <%= image_tag("/assets/logo.png") %>
+              <% else %>
+          <%= image_tag("/assets/logo.png") %>
+        <% end %>
+      </div>
+
     </nav>
 
     <div class="container">

@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+    <%= user.name %>
+        <% user.songs.each do |song| %>
+            <%= song.title %>
+        <% end%>
+<% end %>

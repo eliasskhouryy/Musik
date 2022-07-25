@@ -18,4 +18,9 @@ class ApplicationController < ActionController::Base
         redirect_to login_path unless (@current_user.present? && @current_user.admin?) #can use ? for admin as its a boolean
     end
 
+    def search
+        @query = params[:query]
+        @users = User.where("users.name LIKE ?", ["%#{@query}%"])
+        render :results
+    end 
 end

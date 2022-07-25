@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/search' => 'session#search'
 end

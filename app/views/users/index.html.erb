@@ -1,10 +1,7 @@
 <div class="forms">
     <h1><%= @current_user.name %></h1>
     <% if @current_user.avatar.attached? %>
-        <%= image_tag(@current_user.avatar, :style => 'object-fit: cover;
-                                                        border-radius: 50%;  
-                                                        width: 200px;
-                                                        height: 200px;') %>
+        <%= image_tag(@current_user.avatar, :style => 'object-fit: cover; border-radius: 50%; width: 200px; height: 200px;') %>
     <% else %> 
         <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :style => 'max-width: 200px; border-radius: 50%;') %>
     <% end%>
