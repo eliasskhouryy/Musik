@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&display=swap');
 
-* {
-    box-sizing: border-box;
+*{
+	box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background-color: rgb(231, 230, 230);
+    background-color: #81CACF;
 }
 
 nav {
@@ -22,24 +22,21 @@ nav {
     justify-content: space-between;
 }
 
-
-
 nav a {
     padding: 14px 16px;
     text-decoration: none;
     vertical-align: middle;
     padding-top: 5px;
+    color: #355764;
 }
 
 nav a:hover {
-    border-bottom: solid rgb(179, 139, 179) 2px;
-
+    color:#5A8F7B;
 }
 
 nav  img  {
     max-width: 100px;
     vertical-align: middle;
-    
 }
 
 nav img a:hover {
@@ -65,9 +62,8 @@ nav img a:hover {
 
 
 .post h2 {
-    display: inline-block;
-    font-weight: 100;
-    
+    display: inline;
+    font-weight: 100;   
 }
 
 .post  {
@@ -95,7 +91,8 @@ nav img a:hover {
 }
 
 .postBox .submitButton {
-    background-color: rgb(170, 206, 170);
+    background-color: #5A8F7B;
+    color: white;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     width: 20%; 
     margin: auto;
@@ -104,6 +101,7 @@ nav img a:hover {
     display: block;
     border: none;
 }
+
 .postBox .submitButton:hover {
     cursor: pointer;
     background-color: rgb(137, 196, 137);
@@ -117,9 +115,10 @@ nav img a:hover {
 .feedImage {
     object-fit: cover;
     border-radius: 50%;  
-    width: 100px;
-    height: 100px;
-    float: right;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
@@ -130,7 +129,6 @@ nav img a:hover {
     width: 60%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
-
 }
 
 .forms h1 {
@@ -151,9 +149,9 @@ background-color: #666666;
     width: 100%;
     border: none;
     margin: 10px;
-    background-color: rgb(237, 235, 250);
+    background-color: #8fe3e9;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-    
+    border-radius: 3px;
 }
 
 .forms input::placeholder {
@@ -162,17 +160,30 @@ background-color: #666666;
 }
 
 .forms .submitButton {
-    background-color: rgb(170, 206, 170);
+    background-color: #5A8F7B;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     width: 50%; 
     margin: auto;
     padding: 10px;
+    color: white;
+    border-radius: 3px;
 }
 .forms .submitButton:hover {
     cursor: pointer;
-    background-color: rgb(137, 196, 137);
+    background-color: #355764;
 }
 
 .forms .submitButton:active {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
+
+.text-box {
+    background-color: #355764;
+    display: inline-block;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+

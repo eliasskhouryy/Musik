@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :feeds
+  resources :songs
 
   get '/login' => 'session#new' 
   post '/login' => 'session#create'

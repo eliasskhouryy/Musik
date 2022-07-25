@@ -31,6 +31,6 @@ s3.genres << g2 << g3
 
 puts "feeds and everything other"
 u1.feeds << f2
-f2.songs << s1
+s1.feeds << f2
 u2.feeds << f1
-f1.songs << s3
+s3.feeds << f1

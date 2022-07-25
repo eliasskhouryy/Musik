@@ -1,5 +1,4 @@
 class Feed < ApplicationRecord
-    has_many :songs
+    belongs_to :song, :optional => true
     belongs_to :user, :optional => true
-    has_many :song, :through => :user
 end

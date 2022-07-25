@@ -1,37 +1,40 @@
 
 <div class="feed">
-<h1>Home Feed</h1>
 
-<div class="postBox">
-<h2>Create a new post</h2>
-<%= form_for @feed do |f| %>
-    <%= f.text_field :comment, :placeholder => 'Write your thoughts in here...' %>
-    <%= f.label :song_id %>
-    <%= f.select :songs, @current_user.songs.pluck(:title), :include_blank => true %>
-    <%= f.submit "post", :class => 'submitButton' %>
-    
-<% end %>
-</div>
-
-
-
-<% @feeds.reverse.each do |feed|%>
-<div class="post">
-    <% if feed.user.avatar.attached? %>
-    <%= image_tag(feed.user.avatar, :class => 'feedImage') %>
-    <% else %> 
-    <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :class => 'feedImage') %>
+    <div class="postBox">
+    <%# <div class="text-box">
+        <h1>Home Feed</h1>
+    </div> %>
+    <% if @current_user.avatar.attached? %>
+        <%= image_tag(@current_user.avatar, :class => 'feedImage') %>
+     <% else %> 
+        <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :class => 'feedImage') %>
     <% end%>
-    <h2><%= link_to feed.user.name, user_path(feed.user.id) %></h2>
-    <h3><%= feed.songs.first.title  if feed.songs.first.present? %></h3>
-    <% if feed.songs.first.present? %>
-    <h3><%= feed.songs.first.bpm %> BPM </h3>
-    <% end%>
-    <p> <span class="inspiration">Inspiration</span> <br><%= feed.comment %></p>
-    <%# <%= link_to 'Delete post', @current_user, :method => 'delete', :data => {:confirm => 'Are you sure?'} if @current_user.present? %> 
-</div>
-<% end %>
+        <h2>Create a new post</h2>
+        <%= form_for @feed do |f| %>
+            <%= f.text_field :comment, :placeholder => 'Write your thoughts in here...' %>
+            <%= f.label :song_id %>
+            <%= f.select :song_id, @current_user.songs.pluck(:title), :include_blank => true %>
+            <%= f.submit "post", :class => 'submitButton' %>
+    <% end %>
+    </div>
 
 
 
+    <% @feeds.reverse.each do |feed|%>
+        <div class="post">
+            <% if feed.user.avatar.attached? %>
+                <%= image_tag(feed.user.avatar, :class => 'feedImage') %>
+                <% else %> 
+                <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :class => 'feedImage') %>
+            <% end%>
+                <h2><%= link_to feed.user.name, user_path(feed.user.id) %></h2>
+                <h3><%= feed.song.title  if feed.song.present? %></h3>
+            <% if feed.song.present? %>
+                <h3><%= feed.song.bpm %> BPM </h3>
+            <% end%>
+                <p> <span class="inspiration">Inspiration</span> <br><%= feed.comment %></p>
+                <%# <%= link_to 'Delete post', @current_user, :method => 'delete', :data => {:confirm => 'Are you sure?'} if @current_user.present? %> 
+        </div>
+    <% end %>
 </div>

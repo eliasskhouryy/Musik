@@ -6,7 +6,10 @@ class FeedsController < ApplicationController
 
   def create
     feed = Feed.create feed_params
-    @current_user.feeds << feed
+    @current_user.feeds << feed 
+    song = Song.find_by :title => params[:feed][:song_id]
+    feed.song = song
+    feed.save
     redirect_to feeds_path
   end
 
@@ -15,7 +18,6 @@ class FeedsController < ApplicationController
     @feeds = Feed.all
   end
 
-
   def destroy
     feed = Feed.find params[:id]
     feed.destroy
@@ -23,6 +25,6 @@ class FeedsController < ApplicationController
 
   private
   def feed_params
-    params.required(:feed).permit(:comment)
+    params.required(:feed).permit(:comment, :song_id)
   end
 end

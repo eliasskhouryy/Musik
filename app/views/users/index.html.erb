@@ -9,16 +9,18 @@
         <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :style => 'max-width: 200px; border-radius: 50%;') %>
     <% end%>
 
-        <%= form_for @current_user do |f| %>
-                <%= f.file_field :avatar  %>
-            <%= f.submit "Change Pic" ,:class => 'submitButton', :method => :put%>
-        <% end%>
+    <%= form_for @current_user do |f| %>
+        <%= f.file_field :avatar  %>
+        <%= f.submit "Change Pic" ,:class => 'submitButton'%>
+    <% end%>
 
-    <h2>All music</h2>
+
+    <h2><%= link_to 'All music', songs_path %></h2>
     <% @current_user.songs do |song|%>
     <h3> <%= song.title  %> </h3>
     <% end%>
-
     <%= @current_user.songs[0].title if @current_user.songs.present?%>
+
+    
 
 </div>

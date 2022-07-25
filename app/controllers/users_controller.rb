@@ -10,15 +10,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @current_user.avatar.attached?
       @current_user.avatar.purge
-      @current_user.update user_params(:avatar)
+      @current_user.update_attributes :avatar => user_params[:avatar]
       redirect_to users_path
-    else
-      @current_user.update user_params(:avatar)
-      redirect_to users_path
-    end
-
   end
 
   def new

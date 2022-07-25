@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_07_23_112701) do
     t.integer "genre_id"
     t.text "comment"
     t.integer "user_id"
+    t.integer "song_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,7 +60,6 @@ ActiveRecord::Schema.define(version: 2022_07_23_112701) do
     t.text "title"
     t.integer "bpm"
     t.integer "user_id"
-    t.integer "feed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

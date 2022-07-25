@@ -4,7 +4,7 @@
     <title>Musik</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -21,9 +21,10 @@
     <div class="left">
     <% if @current_user.present? %>
       <%# <%= link_to "all users", users_path if @current_user.admin? %>
-      <%= link_to 'Home', feeds_path %>
-      <%= link_to "Logout", login_path, :method => 'delete' %>
-      <%= link_to "Profile", users_path%>
+      <%= link_to 'home', feeds_path, :class => 'material-icons' %>
+      <%= link_to "person", users_path, :class => 'material-icons'%>
+      <%= link_to "logout", login_path, :method => 'delete', :class => 'material-icons' %>
+      
     <% else %>
       <%= link_to 'Sign up', new_user_path %>
       <%= link_to 'Sign in', login_path %>

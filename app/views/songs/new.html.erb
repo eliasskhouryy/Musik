@@ -1,0 +1,7 @@
+<div class="forms">
+    <%= form_for @song do |f| %>
+        <%= f.text_field :title, :placeholder => 'Song Title' %>
+        <%= f.number_field :bpm, :placeholder => 'BPM' %>
+        <%= f.submit "Add", :class => 'submitButton' %>
+    <% end%>
+</div>
