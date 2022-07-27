@@ -4,8 +4,6 @@
 <div class="forms">
     <%= form_for @song, :html => {:multipart => true}  do |f| %>
         <%= f.text_field :title, :placeholder => 'Song Title' %>
-        <%# <%= f.label 'Add Song Mp3' %>
-        <%# <%= f.file_field :mp3 %>
         <%= f.number_field :bpm, :placeholder => 'BPM' %>
         <%= f.label 'Add Artwork' %>
         <%= f.cl_image_upload :image %>

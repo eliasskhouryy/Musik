@@ -304,7 +304,25 @@ hr {
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     color: #EAFFD0;
     font-size: 50px;
+}
 
+.songs .submitButton {
+    background-color: red;
+    text-decoration: none;
+    color: #EAFFD0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 20%; 
+    margin: auto;
+    margin-top: 15px;
+    padding: 6px;
+    display: block;
+    border: none;
+    border-radius: 5px;
+}
+
+.songs .submitButton:hover {
+    cursor: pointer;
+    background-color: #F38181;
 }
 
 .hamburger-menu {

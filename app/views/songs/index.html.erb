@@ -7,10 +7,9 @@
         <%= cl_image_tag(song.image, :class => 'coverArt') if song.image.present? %>
         <h2><%= song.bpm if @current_user.songs.present? %> BPM</h2>
         <% song.genres.each  do |genre|%>
-        #<%= genre.name %>
+            #<%= genre.name %>
         <% end %>
             <%= link_to 'Delete Song', song, :method => 'delete', :class => 'submitButton' ,:data => {:confirm => 'Are you sure?'} %>
-
     </div>
     <br>
 

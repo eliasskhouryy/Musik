@@ -6,5 +6,4 @@ class User < ApplicationRecord
     has_many :feeds
     has_many :songs 
     has_many :genres, :through => :songs 
-    has_one_attached :avatar
 end
