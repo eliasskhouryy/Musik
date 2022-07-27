@@ -11,9 +11,9 @@ class SongsController < ApplicationController
             req = Cloudinary::Uploader.upload params[:file]
             @song.image = req["public_id"]
             @song.save
-            @current_user.songs << @song
 
           end
+          @current_user.songs << @song
         redirect_to songs_path
 
     end
