@@ -7,7 +7,7 @@
             <% if @current_user.image.present? %>
                  <%= cl_image_tag(@current_user.image, :class => 'feedImage2') %>
             <% else %> 
-                <%= image_tag('https://freesvg.org/img/abstract-user-flat-4.png', :class => 'feedImage2') %>
+                <%= image_tag('https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png', :class => 'feedImage2') %>
             <% end%>
             <%= f.text_field :comment, :placeholder => "What inspired you #{@current_user.name}?", :required => true %>
             <br>
@@ -22,7 +22,7 @@
             <% if feed.user.image.present? %>
                 <%= cl_image_tag(feed.user.image, :class => 'feedImage') %>
                 <% else %> 
-                <%= image_tag('https://freesvg.org/img/abstract-user-flat-4.png', :class => 'feedImage') %>
+                <%= image_tag('https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png', :class => 'feedImage') %>
             <% end%>
                 
                 <h2><%= link_to feed.user.name, user_path(feed.user.id) %></h2>
