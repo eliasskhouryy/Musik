@@ -5,6 +5,7 @@
     <%= form_for @song, :html => {:multipart => true}  do |f| %>
         <%= f.text_field :title, :placeholder => 'Song Title' %>
         <%= f.number_field :bpm, :placeholder => 'BPM' %>
+        <%= f.text_field :sound, :placeholder => 'Soundcloud API-Link (optional)' %>
         <%= f.label 'Add Artwork' %>
         <%= f.cl_image_upload :image %>
         <%= f.submit "Add", :class => 'submitButton' %>

@@ -2,6 +2,7 @@ class SongsController < ApplicationController
     before_action :check_for_login
     def new
         @song = Song.new
+
     end
 
     def create
@@ -13,8 +14,8 @@ class SongsController < ApplicationController
             @current_user.songs << @song
 
           end
-        
         redirect_to songs_path
+
     end
 
     def index
@@ -29,6 +30,6 @@ class SongsController < ApplicationController
 
     private
     def song_params
-      params.required(:song).permit(:title, :bpm)
+      params.required(:song).permit(:title, :bpm, :sound)
     end
 end 
