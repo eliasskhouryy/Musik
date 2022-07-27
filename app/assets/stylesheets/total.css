@@ -7,7 +7,17 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background-color: #F9F7F7;
+    /* background-image: url('https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/non-4k/original/23.jpg?3');
+    background-size: cover;
+    background-attachment: fixed; */
+    background-color: rgb(216, 247, 241);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 75px;
+    text-align: center;
 }
 
 nav {
@@ -23,16 +33,24 @@ nav {
     align-items: center;
 }
 
+nav .left {
+}
+
+nav .searchBar {
+    margin-right: 100px;
+}
+
 nav a {
     padding: 14px 16px;
     text-decoration: none;
     vertical-align: middle;
     padding-top: 5px;
-    color: #3F72AF;
+    color: #ef6262;
+    display: inline-block;
 }
 
 nav a:hover {
-    color:#5A8F7B;
+    color:#95E1D3;
 }
 
 nav  img  {
@@ -50,16 +68,8 @@ nav input {
     border-radius: 15px;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-    background-color: #F9F7F7;
-    margin-right: 55px;
 }
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    margin-top: 75px;
-    text-align: center;
-}
 
 .post, .postBox {
     background-color: white;
@@ -69,11 +79,12 @@ nav input {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     margin: auto 20%;
     margin-bottom: 15px;
-    color: #112D4E;
+    color: #486f68;
 }
 
 .post a {
     text-decoration: none;
+    color: #486f68;
 }
 .post a:hover {
     text-decoration: underline;
@@ -92,14 +103,46 @@ nav input {
     font-style: italic;
 }
 
+.post .submitButton {
+    background-color: red;
+    color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 20%; 
+    margin: auto;
+    margin-top: 15px;
+    padding: 6px 10px;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.post .submitButton:hover {
+    text-decoration: none;
+    
+}
+            
 .postBox input {
     padding: 15px;
-    width: 100%;
+    width: 60%;
+    
     border: 0px solid rgb(110, 203, 203);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     border-radius: 5px;
     margin: 10px;
-    background-color: #F9F7F7;
+    background-color: #f6ffea;
+    display: inline;
+    
+}
+.feedImage2 {
+    object-fit: cover;
+    border-radius: 50%;  
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    display: inline;
+    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
 hr {
@@ -107,13 +150,12 @@ hr {
 }
 
 .postBox input::placeholder {
-    color:black;
-    opacity: 0.6;
+    color:#F38181;
 }
 
 .postBox .submitButton {
-    background-color: #3F72AF;
-    color: white;
+    background-color: #F38181;
+    color: #EAFFD0;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     width: 20%; 
     margin: auto;
@@ -141,12 +183,11 @@ hr {
     height: 60px;
     margin-top: 10px;
 }
-.feedImage2 {
+
+.feedArt {
     object-fit: cover;
-    border-radius: 50%;  
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
+    width: 100%;
+    display: block;
 }
 
 .forms {
@@ -160,7 +201,7 @@ hr {
 }
 
 .forms h1 {
-background-color: #666666;
+    background-color: #666666;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -177,7 +218,7 @@ background-color: #666666;
     width: 100%;
     border: none;
     margin: 10px;
-    background-color: #DBE2EF;
+    background-color: #EAFFD0;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     border-radius: 3px;
 }
@@ -188,12 +229,12 @@ background-color: #666666;
 }
 
 .forms .submitButton {
-    background-color: #3F72AF;
+    background-color: #F38181;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     width: 50%; 
     margin: auto;
     padding: 10px;
-    color: white;
+    color: #EAFFD0;
     border-radius: 3px;
 }
 .forms .submitButton:hover {
@@ -215,3 +256,250 @@ background-color: #666666;
     text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
 }
 
+.songs {
+    background-color: #F38181;
+    color: white;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.songs {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.songs h1 {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    color: #EAFFD0;
+}
+
+.songs h2 {
+    color: #95E1D3;
+}
+
+ .songAdd {
+    text-decoration: none;
+    background-color: #F38181;
+    display: inline-block;
+    padding: 10px 16px;
+    color: #EAFFD0;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.title {
+    background-color: #F38181;
+    color: white;
+    padding: 1px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.title h1 {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    color: #EAFFD0;
+    font-size: 50px;
+
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+      #menu__toggle {
+        opacity: 0;
+      }
+      #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked + .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+      }
+      #menu__toggle:checked + .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        left: 0 !important;
+      }
+      .menu__btn {
+        position: fixed;
+        top: 30px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+        display: inline-block;
+
+      }
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ef6262;
+        color: #ef6262;
+        transition-duration: .25s;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 8px;
+      }
+      .menu__box {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: white;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+      }
+      .menu__item {
+        display: block;
+       
+        color: #F38181;
+
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        transition-duration: .25s;
+      }
+      .menu__item:hover {
+        background-color: #EAFFD0;
+        color: #F38181;
+      }
+
+      .coverArt {
+        display: block;
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+
+      
+      @media screen and (max-width: 720px) {
+        .container {
+            max-width: 100%;
+        }
+        .forms {
+            background-color: white;
+            display: inline-block;
+            padding: 0 50px 50px 50px;
+            width: 95%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border-radius: 10px;
+            color: #112D4E;
+        }
+
+        .post, .postBox {
+            width: 95%;
+            margin: 10px auto;
+        }
+
+        .title {
+            background-color: #F38181;
+            color: white;
+            padding: 1px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            width: 95%;
+            border-radius: 10px;
+        }
+
+        .title h1 {
+            font-size: 30px;
+        }
+        
+        .hide {
+            display: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            z-index: 33;
+            max-width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 14px 16px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        .hamburger-menu {
+            display: block;
+        }
+        nav  img  {
+            max-width: 60px;
+            vertical-align: middle;
+        }
+        
+        nav img a:hover {
+            border-bottom: 0px;
+        }
+        
+        nav input {
+            padding: 8px;
+            width: 150px;
+            border-radius: 15px;
+            border: 0;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        }
+        
+        nav .searchBar {
+            margin-right: 0px;
+            margin-left: 0;
+
+        }
+
+        .songs {
+            background-color: #F38181;
+            color: white;
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            width: 95%;
+            border-radius: 10px;
+        }
+
+        .songs {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+        }
+
+        .songs h1 {
+            text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+            color: #EAFFD0;
+        }
+
+        .songs h2 {
+            color: #95E1D3;
+        }
+
+        .songAdd {
+            text-decoration: none;
+            background-color: #F38181;
+            display: inline-block;
+            padding: 10px 16px;
+            color: #EAFFD0;
+            border-radius: 5px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+      }

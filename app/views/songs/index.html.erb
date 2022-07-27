@@ -1,10 +1,20 @@
-<h1>All Music</h1>
-<div class="forms">
-    <% @current_user.songs.each do |song|%>
-        <h1> <%= song.title if @current_user.songs.present? %> </h1>
-        <h2><%= song.bpm if @current_user.songs.present? %> BPM</h2>
-    <% end%>
 
-    <%= link_to 'Add Song', new_song_path %>
-</div>
+<%= link_to 'Add Song', new_song_path, :class => 'songAdd' %>
+<br><br>
+<% @current_user.songs.reverse.each do |song|%>
+    <div class="songs">
+        <h1> <%= song.title if @current_user.songs.present? %> </h1>
+        <%= cl_image_tag(song.image, :class => 'coverArt') if song.image.present? %>
+        <h2><%= song.bpm if @current_user.songs.present? %> BPM</h2>
+        <% song.genres.each  do |genre|%>
+        #<%= genre.name %>
+        <% end %>
+            <%= link_to 'Delete Song', song, :method => 'delete', :class => 'submitButton' ,:data => {:confirm => 'Are you sure?'} %>
+
+    </div>
+    <br>
+
+<% end%>
+
+
 

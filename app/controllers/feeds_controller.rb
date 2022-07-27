@@ -19,8 +19,9 @@ class FeedsController < ApplicationController
   end
 
   def destroy
-    feed = Feed.find params[:id]
-    feed.destroy
+    @feed = Feed.find params[:id]
+    @feed.destroy
+    redirect_to feeds_path
   end
 
   private

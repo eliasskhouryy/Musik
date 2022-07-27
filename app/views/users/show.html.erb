@@ -1,18 +1,24 @@
+<br>    
 <div class="forms">
 
 <h1><%= @user.name %></h1>
 
-<% if @user.avatar.attached? %>
-    <%= image_tag(@user.avatar, :style => 'max-width: 200px; border-radius: 50%;') %>
+<% if @user.image.present? %>
+    <%= cl_image_tag(@user.image, :style => 'object-fit: cover; border-radius: 50%; width: 200px; height: 200px;') %>
 <% else %> 
-    <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :style => 'max-width: 200px; border-radius: 50%;') %>
+    <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :style => 'object-fit: cover; border-radius: 50%; width: 200px; height: 200px;') %>
 <% end%>
-
-<h2>All music</h2>
-<%  @user.songs.each do |u|%>
-    <h3><%= u.title  if u.present?%></h3>
+</div>
+<br><br>
+<%  @user.songs.reverse.each do |u|%>
+    <div class="songs">
+    <h1><%= u.title  if u.present?%></h1>
     <% if u.title.present? %>
-    <h4><%= u.bpm%> BPM</h4>
+     <%= cl_image_tag(u.image, :class => 'coverArt') if u.image.present? %>
+    <h2><%= u.bpm%> BPM</h2>
+        <% u.genres.each  do |genre|%>
+        #<%= genre.name %>
+        <% end %>
+    </div>
     <% end%>
 <% end %>
-</div>

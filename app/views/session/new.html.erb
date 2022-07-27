@@ -1,10 +1,13 @@
-<%# <h1>Musik</h1> %>
+<div class="title">
+    <h1>Welcome to Musik</h1>
+</div>
+
 <div class="forms">
      <div class="text-box">
         <h2>Sign in</h2>
     </div>
     <% if flash[:error].present?%>
-        <h2><%= flash[:error] %></hs>
+        <h2><%= flash[:error] %></h2>
     <% end %>
 
     <%= form_tag login_path do %>

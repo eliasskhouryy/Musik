@@ -3,6 +3,7 @@ class CreateSongs < ActiveRecord::Migration[5.2]
     create_table :songs do |t|
       t.text :title
       t.integer :bpm
+      t.string :image
       t.integer :user_id
       t.timestamps
     end

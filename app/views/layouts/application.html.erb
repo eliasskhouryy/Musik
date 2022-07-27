@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musik</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%= cloudinary_js_config %>
+
   </head>
 
   <body>
-    <nav>
-
-      <div class="left">
+   
+    <nav class="">
+        <div class="left">
         <% if @current_user.present? %>
+          <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><%= link_to 'Home', feeds_path, :class => 'menu__item', :title => 'Home Page' %></li>
+          <li><%= link_to 'Add a Song', new_song_path, :class => 'menu__item', :title => 'Add a Song'%></li>
+          <li><%= link_to "Profile", users_path, :class => 'menu__item', :title => 'Profile Page'%></li>
+          <li><%= link_to "Logout", login_path, :method => 'delete', :class => 'menu__item', :title => 'Logout' %></li>
+        </ul>
+      </div>
+
           <%# <%= link_to "all users", users_path if @current_user.admin? %>
-          <%= link_to "logout", login_path, :method => 'delete', :class => 'material-icons md-48' %>
-          <%= link_to "person", users_path, :class => 'material-icons md-48'%>
-          <%= link_to 'home', feeds_path, :class => 'material-icons md-48' %>
+          <%= link_to "logout", login_path, :method => 'delete', :class => 'material-icons md-48 hide', :title => 'Logout' %>
+          <%= link_to "person", users_path, :class => 'material-icons md-48 hide', :title => 'Profile Page'%>
+          <%= link_to 'home', feeds_path, :class => 'material-icons md-48 hide', :title => 'Home Page' %>
+          <%= link_to 'add_box', new_song_path, :class => 'material-icons md-48 hide', :title => 'Add a Song'%>
         <% else %>
           <%= link_to 'Sign up', new_user_path %>
           <%= link_to 'Sign in', login_path %>
@@ -30,14 +50,12 @@
           <input type="search" placeholder="Search users" name="query" method="GET">
         </form>
       </div>
-      <% end%>
+      <% end %>
 
       <div class="right">
-        <% if @current_user.present? %>
+        
           <%= image_tag("/assets/logo.png") %>
-              <% else %>
-          <%= image_tag("/assets/logo.png") %>
-        <% end %>
+          
       </div>
 
     </nav>

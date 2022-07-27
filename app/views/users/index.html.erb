@@ -1,23 +1,17 @@
-<div class="forms">
+
+<div class="title">
     <h1><%= @current_user.name %></h1>
-    <% if @current_user.avatar.attached? %>
-        <%= image_tag(@current_user.avatar, :style => 'object-fit: cover; border-radius: 50%; width: 200px; height: 200px;') %>
+</div>
+<div class="forms">
+    <br>
+    <% if @current_user.image.present? %>
+        <%= cl_image_tag(@current_user.image, :style => 'object-fit: cover; border-radius: 50%; width: 200px; height: 200px;') %>
     <% else %> 
         <%= image_tag('https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360', :style => 'max-width: 200px; border-radius: 50%;') %>
     <% end%>
-
-    <%= form_for @current_user do |f| %>
-        <%= f.file_field :avatar  %>
+    <%= form_for @current_user, :html => {:multipart => true} do |f| %>
+        <%= f.cl_image_upload :image %>
         <%= f.submit "Change Pic" ,:class => 'submitButton'%>
-    <% end%>
-
-
-    <h2><%= link_to 'All music', songs_path %></h2>
-    <% @current_user.songs do |song|%>
-    <h3> <%= song.title  %> </h3>
-    <% end%>
-    <%= @current_user.songs[0].title if @current_user.songs.present?%>
-
-    
-
+    <% end%> <br>
+    <%= link_to 'All music', songs_path, :class => 'submitButton', :style => 'text-decoration: none;' %>
 </div>

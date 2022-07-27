@@ -1,6 +1,15 @@
+
 <% @users.each do |user| %>
-    <%= user.name %>
-        <% user.songs.each do |song| %>
-            <%= song.title %>
-        <% end%>
+    <div class="title">
+        <h1><%= user.name %></h1>
+    </div>
+<% end%>
+
+<% @users.each do |user| %>
+    <% user.songs.each do |song| %>
+        <div class="songs"> 
+            <h2><%= song.title %></h2>
+            <%= cl_image_tag(song.image, :class => 'feedArt') %>
+        </div>
+    <% end%>   
 <% end %>
