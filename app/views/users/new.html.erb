@@ -1,13 +1,17 @@
+<div class="title">
+    <h1>Welcome to Musik!</h1>
+</div>
+
 <div class="forms">
     <div class="text-box">
         <h2>Create an Account</h2>
     </div>
     <% if @user.errors.any? %>
-        <ol>
+        <ul>
             <% @user.errors.full_messages.each do |msg|%>
-                <%= msg %>
+                <li style="list-style: none;"><%= msg %></li>
             <% end %>
-        </ol>
+        </ul>
     <% end %>
 
     <%= form_for @user, :html => {:multipart => true} do |f| %>

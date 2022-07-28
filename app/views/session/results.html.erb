@@ -1,15 +1,20 @@
-
-<% @users.each do |user| %>
-    <div class="title">
-        <h1><%= user.name %></h1>
-    </div>
-<% end%>
-
-<% @users.each do |user| %>
-    <% user.songs.each do |song| %>
-        <div class="songs"> 
-            <h2><%= song.title %></h2>
-            <%= cl_image_tag(song.image, :class => 'feedArt') %>
+<% if @users.present?%>
+    <% @users.each do |user| %>
+        <div class="title">
+            <h1><%= link_to user.name, user, :style => 'text-decoration: none; color: #EAFFD0;' %></h1>
         </div>
-    <% end%>   
+    <% end%>
+
+    <% @users.each do |user| %>
+        <% user.songs.each do |song| %>
+            <div class="songs"> 
+                <h2><%= song.title %></h2>
+                <%= cl_image_tag(song.image, :class => 'feedArt') %>
+            </div>
+        <% end%>   
+    <% end %>
+<% else %>
+    <div class="error">
+        <h1>Sorry, User not found.</h1>
+    </div>
 <% end %>

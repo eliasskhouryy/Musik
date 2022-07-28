@@ -77,7 +77,7 @@ nav input {
     padding: 20px;
     padding-top: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    margin: auto 20%;
+    margin: auto 10%;
     margin-bottom: 15px;
     color: #486f68;
 }
@@ -182,6 +182,7 @@ hr {
     width: 60px;
     height: 60px;
     margin-top: 10px;
+    
 }
 
 .feedArt {
@@ -194,7 +195,7 @@ hr {
     background-color: white;
     display: inline-block;
     padding: 0 50px 50px 50px;
-    width: 60%;
+    width: 80%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
     color: #112D4E;
@@ -296,7 +297,7 @@ hr {
     padding: 1px;
     margin: 0 auto;
     margin-bottom: 10px;
-    width: 60%;
+    width: 80%;
     border-radius: 10px;
 }
 
@@ -413,7 +414,11 @@ hr {
         margin: 0 auto;
       }
 
-      
+      .error {
+        color: red;
+        padding: 30px;
+      }
+
       @media screen and (max-width: 720px) {
         .container {
             max-width: 100%;
@@ -426,6 +431,10 @@ hr {
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
             border-radius: 10px;
             color: #112D4E;
+        }
+
+        .forms input {
+            width: 100%;
         }
 
         .post, .postBox {
@@ -519,5 +528,10 @@ hr {
             color: #EAFFD0;
             border-radius: 5px;
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        .post .submitButton {
+            text-align: center;
+            width: 120px;
         }
       }
