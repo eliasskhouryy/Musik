@@ -77,7 +77,7 @@ nav input {
     padding: 20px;
     padding-top: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    margin: auto 10%;
+    margin: auto 15%;
     margin-bottom: 15px;
     color: #486f68;
 }
@@ -124,7 +124,7 @@ nav input {
             
 .postBox input {
     padding: 15px;
-    width: 60%;
+    width: 70%;
     
     border: 0px solid rgb(110, 203, 203);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -204,7 +204,7 @@ hr {
     background-color: white;
     display: inline-block;
     padding: 0 50px 50px 50px;
-    width: 80%;
+    width: 70%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
     color: #112D4E;
@@ -273,7 +273,7 @@ hr {
     padding: 20px;
     margin: 0 auto;
     margin-bottom: 10px;
-    width: 60%;
+    width: 70%;
     border-radius: 10px;
 }
 
@@ -307,7 +307,7 @@ hr {
     padding: 1px;
     margin: 0 auto;
     margin-bottom: 10px;
-    width: 80%;
+    width: 70%;
     border-radius: 10px;
 }
 
