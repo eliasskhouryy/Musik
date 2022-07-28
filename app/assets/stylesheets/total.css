@@ -550,4 +550,8 @@ hr {
             text-align: center;
             width: 120px;
         }
+        .songs .submitButton {
+            text-align: center;
+            width: 120px;
+        }
       }
