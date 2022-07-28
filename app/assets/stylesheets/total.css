@@ -163,6 +163,7 @@ hr {
     padding: 6px;
     display: block;
     border: none;
+    text-align: center;
 }
 
 .postBox .submitButton:hover {
@@ -189,6 +190,14 @@ hr {
     object-fit: cover;
     width: 100%;
     display: block;
+}
+
+.feed select {
+    font-size: px;
+    padding: 5px;
+    background-color: #f6ffea;
+    border: 1px solid #F38181;
+
 }
 
 .forms {
@@ -237,6 +246,7 @@ hr {
     padding: 10px;
     color: #EAFFD0;
     border-radius: 3px;
+    text-align: center;
 }
 .forms .submitButton:hover {
     cursor: pointer;
@@ -319,6 +329,7 @@ hr {
     display: block;
     border: none;
     border-radius: 5px;
+    text-align: center;
 }
 
 .songs .submitButton:hover {

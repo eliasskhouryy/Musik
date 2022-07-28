@@ -41,7 +41,7 @@
                 <% end %>
             <% end %>
             <% if feed.user.id == @current_user.id %> <br>
-                <%= link_to 'Delete post', feed, :method => 'delete', :class => 'submitButton' ,:data => {:confirm => 'Are you sure?'} %>
+                <%= link_to 'Delete post', feed, :method => 'delete', :class => 'submitButton', :style => 'text-align: center;',:data => {:confirm => 'Are you sure?'} %>
             <% end %>
         </div>
     <% end %>
