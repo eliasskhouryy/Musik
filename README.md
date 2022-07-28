@@ -24,7 +24,7 @@ Accessible online at [https://tranquil-plains-67510.herokuapp.com/](https://tran
 ## **Table of Contents**
 
 - [Design](#design)
-- [Built With](#built-with)
+- [Tech Stack](#Tech-Stack)
 - [Functionality](#functionality)
 - [Creator](#creator)
 - [Acknowledgments](#acknowledgments)  
@@ -61,7 +61,7 @@ Accessible online at [https://tranquil-plains-67510.herokuapp.com/](https://tran
 
 <br>
 
-## Built With
+## Tech Stack
 - [Ruby on Rails(5.2)](https://rubyonrails.org/)
 - [HTML5](https://www.w3schools.com/html/)
 - [CSS3](https://www.w3schools.com/css/)
@@ -108,4 +108,3 @@ ______
 - Coffee
 - Youtube
 - Dual monitors
-- 
