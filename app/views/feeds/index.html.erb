@@ -13,7 +13,7 @@
             <br>
             <%= f.label :song_id %>
             <%= f.select :song_id, @current_user.songs.pluck(:title), :include_blank => true %>
-            <%= f.submit "post", :class => 'submitButton' %>
+            <%= f.submit "Post", :class => 'submitButton' %>
         <% end %>
     </div>
     

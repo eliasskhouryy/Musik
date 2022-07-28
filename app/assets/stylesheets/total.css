@@ -453,6 +453,11 @@ hr {
             margin: 10px auto;
         }
 
+        .postBox .submitButton {
+            font-size: 15px;
+            padding: 10px 14px;
+        }
+
         .title {
             background-color: #F38181;
             color: white;
