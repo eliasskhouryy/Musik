@@ -1,12 +1,12 @@
 class FeedsController < ApplicationController
-  before_action :check_for_login
+  before_action :check_for_login #Checks the page for the @current_user
   def new
     @feed = Feed.new
   end
 
   def create
     feed = Feed.create feed_params
-    @current_user.feeds << feed 
+    @current_user.feeds << feed #Adds the feed to the current user table
     song = Song.find_by :title => params[:feed][:song_id]
     feed.song = song
     feed.save

@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def update
       if params[:file].present?
+        # Cloudindary uploading codes for the update method
         req = Cloudinary::Uploader.upload params[:file]
         @current_user.image = req["public_id"]
         @current_user.save
@@ -24,6 +25,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if params[:file].present?
+      # Cloudindary uploading codes for the create method
       req = Cloudinary::Uploader.upload params[:file]
       @user.image = req["public_id"]
       @user.save

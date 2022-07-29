@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
     def search
         @query = params[:query]
-        @users = User.where("users.name LIKE ?", ["%#{@query}%"])
+        @users = User.where("users.name iLIKE ?", ["%#{@query}%"])
         render :results
     end 
 end

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     root :to => 'feeds#index'
   end
 
-
   resources :users
   resources :feeds
   resources :songs
@@ -13,6 +12,5 @@ Rails.application.routes.draw do
   get '/login' => 'session#new' 
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
-
   get '/search' => 'session#search'
 end
